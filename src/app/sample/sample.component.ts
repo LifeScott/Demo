@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SampleService } from '../services/sample.service';
 
 @Component({
   selector: 'app-sample',
@@ -21,7 +22,8 @@ export class SampleComponent implements OnInit {
     this.inputVar='sempre quello che volete voi parte 2';
   }
   showAlert(){
-    alert(this.inputVar);
+    const sampleService: SampleService = new SampleService();
+    sampleService.showAlert(this.inputVar);
   }
 
 }
