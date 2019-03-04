@@ -2,6 +2,6 @@
 <div>{{title}}</div>
 <input [(ngModel)]="vara" type="number">
 <input [(ngModel)]="varb" type="number">
-<div>{{getVal()}}</div>
+<div>{{getSomma()}}</div>
 <div>Ciao</div>
-<a [href]="link">google</a>
+<a [class.prova]="vara === 1" [class.pippo]="varb === 1" [href]="link">Vai a</a>
