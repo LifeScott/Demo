@@ -1,7 +1,11 @@
-<div>Non so cosa scrivere</div>
-<div>{{title}}</div>
-<input [(ngModel)]="vara" type="number">
-<input [(ngModel)]="varb" type="number">
-<div>{{getSomma()}}</div>
-<div>Ciao</div>
-<a [class.prova]="vara === 1" [class.pippo]="varb === 1" [href]="link">Vai a</a>
+<div [ngClass]="definizioneClassi">
+    <div>Non so cosa scrivere</div>
+    <div>{{title}}</div>
+    <input [(ngModel)]="vara" #variabile type="number">
+    <input [(ngModel)]="varb" type="number">
+    <span>{{'valore: '+variabile.value | uppercase}}</span>
+    <div>{{getSomma()}}</div>
+    <div *ngIf="vara === 1">{{oggetto?.value}}</div>
+    <button (click)="mostraVariabile(variabile.value)">clicca</button>
+    <a [class.prova]="vara === 1" [class.pippo]="varb === 1" [href]="link">Vai a</a>
+</div>
