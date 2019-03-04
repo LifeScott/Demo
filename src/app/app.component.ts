@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Demo';
+  vara = 1;
+  varb = 3;
+
+  getVal(): any {
+    return this.vara + this.varb;
+  }
 }
